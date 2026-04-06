@@ -1,0 +1,56 @@
+:root {
+  /* === ELECTROMORÓN OFFICIAL COLORS === */
+  --em-blue:        #0c4dae;
+  --em-blue-dark:   #0c2067;
+  --em-blue-light:  #3a6fc8;
+  --em-beige:       #f1ece1;
+  --em-white:       #ffffff;
+  --em-black:       #202020;
+  --em-gold:        #c89116;
+  --em-warm-brown:  #857764;
+  --em-gray-100:    #f8f8f7;
+  --em-gray-200:    #efefef;
+  --em-gray-400:    #9a9a9a;
+  --em-gray-600:    #5a5a5a;
+
+  /* === TYPOGRAPHY === */
+  --font-display: 'Poppins', sans-serif;
+  --font-body:    'Open Sans', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--em-white);
+  color: var(--em-black);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--em-gray-100); }
+::-webkit-scrollbar-thumb { background: var(--em-blue); border-radius: 3px; }
+
+/* Selection */
+::selection { background: var(--em-blue); color: white; }
+
+/* Gradient Flow Animation */
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientFlow 12s ease infinite;
+}
